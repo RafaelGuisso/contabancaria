@@ -19,36 +19,27 @@ public class Menu {
 		String titular;
 		float saldo, limite, valor;
 
-		// Instância da Classe ContaController
 		ContaController contas = new ContaController();
 
 		System.out.println("\nCriar Contas\n");
 
-		ContaCorrente cc1 = new ContaCorrente(contas.gerarNumero(), 123, 1, "João da Silva", 1000f, 100.0f);
+		ContaCorrente cc1 = new ContaCorrente(contas.gerarNumero(), 123, 1, "Rafael Gomes", 4000f, 500.0f);
 		contas.cadastrar(cc1);
 
-		ContaCorrente cc2 = new ContaCorrente(contas.gerarNumero(), 124, 1, "Maria da Silva", 2000f, 100.0f);
-		contas.cadastrar(cc2);
-
-		ContaPoupanca cp1 = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Mariana dos Santos", 4000f, 12);
-		contas.cadastrar(cp1);
-
-		ContaPoupanca cp2 = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Juliana Ramos", 8000f, 15);
-		contas.cadastrar(cp2);
 
 		contas.listarTodas();
 
 		while (true) {
 
 			System.out.println(Cores.TEXT_BLACK + Cores.ANSI_YELLOW_BACKGROUND
-					+ "*****************************************************");
+					+ "-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO JAVA                        ");
 			System.out.println("                                                     ");
-			System.out.println("*****************************************************");
+			System.out.println("-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("            1 - Criar Conta                          ");
-			System.out.println("            2 - Listar todas as Contas               ");
+			System.out.println("            2 - Listar Contas                        ");
 			System.out.println("            3 - Buscar Conta por Numero              ");
 			System.out.println("            4 - Atualizar Dados da Conta             ");
 			System.out.println("            5 - Apagar Conta                         ");
@@ -57,7 +48,7 @@ public class Menu {
 			System.out.println("            8 - Transferir valores entre Contas      ");
 			System.out.println("            9 - Sair                                 ");
 			System.out.println("                                                     ");
-			System.out.println("*****************************************************");
+			System.out.println("-----------------------------------------------------");
 			System.out.println("Entre com a opção desejada:                          ");
 			System.out.println("                                                     " + Cores.TEXT_RESET);
 
@@ -236,9 +227,9 @@ public class Menu {
 	}
 
 	public static void sobre() {
-		System.out.println("\n*********************************************************");
+		System.out.println("\n-----------------------------------------------------");
 		System.out.println("Encerrando");
-		System.out.println("*********************************************************");
+		System.out.println("-----------------------------------------------------");
 	}
 
 	public static void keyPress() {
